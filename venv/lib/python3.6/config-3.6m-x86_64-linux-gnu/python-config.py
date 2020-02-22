@@ -1,0 +1,1 @@
+/home/gblp270/.pyenv/versions/3.6.7/lib/python3.6/config-3.6m-x86_64-linux-gnu/python-config.py

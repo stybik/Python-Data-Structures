@@ -1,0 +1,1 @@
+/home/gblp270/.pyenv/versions/3.6.7/lib/python3.6/encodings/iso2022_jp.py
