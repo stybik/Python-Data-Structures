@@ -27,21 +27,21 @@ class LinkedList:
             print(temp.data)
             temp = temp.next
 
-    def compare(self, list1, list2):
-        while(list1 and list2 and list1.data == list2.data):
-            list1 = list1.next
-            list2 = list2.next
+def compare(list1, list2):
+    while(list1 and list2 and list1.data == list2.data):
+        list1 = list1.next
+        list2 = list2.next
 
-        if(list1 and list2):
-            return 1 if list1.data > list2.data else -1
+    if(list1 and list2):
+        return 1 if list1.data > list2.data else -1
 
-        if (list1 and not list2):
-            return 1
+    if (list1 and not list2):
+        return 1
 
-        if (list2 and not list1):
-            return -1
+    if (list2 and not list1):
+        return -1
 
-        return 0
+    return 0
 
 if __name__ == "__main__":
     
@@ -60,5 +60,4 @@ if __name__ == "__main__":
 
     llist1.printList()
     llist2.printList()
-
-    print(llist1.compare(llist1, llist2))
+    print(compare(llist1, llist2))
