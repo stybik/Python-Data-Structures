@@ -10,7 +10,7 @@ def display():
 
 # @decorator_function
 # def display_info(name, age):
-# 	print("display_info ran with arguments ({}, {})".format(name, age))
+# 	print("display_info ran with arguments ({}, {})".f  ormat(name, age))
 
 
 # display_info("Bikram", 23)
