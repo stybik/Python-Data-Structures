@@ -9,7 +9,7 @@ def changeMatrix(mat):
         for j in range(0, c):
             if (mat[i][j] == 0):
                 row[i] = 0
-                col[i] = 0
+                col[j] = 0
 
     for i in range(0, r):
         for j in range(0, c):
