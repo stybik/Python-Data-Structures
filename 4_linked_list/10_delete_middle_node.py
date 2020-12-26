@@ -13,15 +13,24 @@ class LinkedList:
 
     # Method to insert a new node at the beginning 
     def push(self, new_data): 
-        new_node = Node(new_data) 
-        new_node.next = self.head 
-        self.head = new_node 
-  
+        new_node = Node(new_data)
+        if self.head is None:
+                self.head = new_node
+                return
+        
+        curr = self.head
+        while(curr.next):
+            curr = curr.next
+
+        curr.next = new_node
+        new_node.next = None
+
+
     # Method function to print the linked LinkedList 
     def printList(self): 
         temp = self.head 
         while(temp): 
-            print(temp.data)
+            print(temp.data, end=" ")
             temp = temp.next
 
     def deleteMid(self):
@@ -53,5 +62,6 @@ if __name__ == "__main__":
 
     llist.deleteMid()
 
+    print()
     print("Linked List after deleting middle node: ")
     llist.printList()
