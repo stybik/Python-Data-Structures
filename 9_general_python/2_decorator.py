@@ -2,21 +2,18 @@ import time
 import math
 
 # decorator to calculate duration taken by any function
-def calculate_time(func):
-
-	# added arguments inside the inner1, if function takes any arguments can be added like this
-	def inner1(*args, **kwargs):
+def calculate_time(original_function):
+	def wrapper(*args, **kwargs):
 		begin = time.time()
-		func(*args, **args)
+		result = original_function(*args, **kwargs)
 		end = time.time()
-		print("Total time taken: ", func.__name__, end - begin)
+		print("Total time taken: ", original_function.__name__, end - begin)
+		return result
+	return wrapper
 
-	return inner1
 
-
-# This can be added to any function
 @calculate_time
-def factorial(num):
+def factorial(num, ):
 	time.sleep(2)
 	print(math.factorial(num))
 
